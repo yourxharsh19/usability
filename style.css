@@ -263,16 +263,21 @@ footer {
   padding: 15px var(--padding-inline-section);
   flex-wrap: wrap;
 }
+.link-column a{
+  text-decoration: none;
+  color:rgb(23, 20, 20) !important;
+}
 .subfooter p {
   text-align: center;
 }
 .section-header h2 {
   text-align: center;
 }
-.subfooter flex a {
-  color: rgb(189, 30, 30);
+.subfooter a{
   text-decoration: none;
+  color: black !important;
 }
 .spacer {
   min-height: 100vh;
 }
+
