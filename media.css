@@ -1,18 +1,57 @@
- /* this is media query style sheet */ */
-.container {
+/* This is media query file */
+.container{
     overflow: hidden;
 }
-
-    .nav-toggle {
-        display: none;
-    } 
-    @media screen and (max-width: 991px) {
-        .nav-toggle {
-            display: block;
-            margin-right: 20px;
-        }  
-    }
-
-.nav-links {
+.nav-toggle{
     display: none;
+}
+.example-card{
+    height: 300px;
+}
+@media screen and (max-width:991px) {
+    .nav-toggle{
+        display: block;
+        margin-right: 20px;
+    }
+    .nav-links{
+        display: none;
+    }
+    .example-area{
+        flex-wrap: wrap;
+        /* gap: 10px; */
+    }
+    .example-card{
+        width: calc(50% - 10px);
+        margin: 10px 0;
+        height: 180px;
+    }
+    .logos{
+        justify-content: space-evenly;
+    }
+}
+@media screen and (max-width:767px) {
+    .header-section{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .header-left{
+        width: 100%;
+        text-align: center;
+    }
+    .primary-button{
+        width: 100%;
+    }
+    .header-right img{
+        width: 100%;
+    }
+    .big-feature-container{
+        flex-direction: column;
+    }
+    #spl-cont{
+        flex-direction: column-reverse;
+    }
+    
+    
+    
 }
