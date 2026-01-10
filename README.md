@@ -2,6 +2,8 @@
 
 A responsive clone of the UsabilityHub homepage, built with HTML, CSS, and JavaScript. This project demonstrates modern web design capabilities, responsive layouts, and interactive elements.
 
+🔗 **Live Demo:**https://yourxharsh19.github.io/usability/
+
 ## Features
 
 -   **Responsive Design**: Fully responsive layout that adapts to desktops, tablets, and mobile devices.
