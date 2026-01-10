@@ -1,66 +1,157 @@
 /* This is media query file */
-.container{
-    overflow: hidden;
-}
-.nav-toggle{
-    display: none;
-}
-.example-card{
-    height: 300px;
-}
-@media screen and (max-width:991px) {
-    .nav-toggle{
+
+/* General Overrides for Mobile */
+@media screen and (max-width: 991px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Navigation */
+    .nav-toggle {
         display: block;
         margin-right: 20px;
+        font-size: 1.5rem;
+        color: var(--primary-text-color);
+        cursor: pointer;
     }
-    .nav-links{
+
+    .nav-links {
         display: none;
-    }
-    .example-area{
-        flex-wrap: wrap;
-        /* gap: 10px; */
-    }
-    .example-card{
-        width: calc(50% - 10px);
-        margin: 10px 0;
-        height: 180px;
-    }
-    .logos{
-        justify-content: space-evenly;
-    }
-}
-@media screen and (max-width:767px) {
-    .header-section{
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-    .header-left{
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-basis: auto;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .main-nav {
+        overflow: visible;
+        /* Allow dropdown to show */
+        position: relative;
+    }
+
+    /* Content Layouts */
+    .header-section {
+        flex-direction: column;
+        gap: 30px;
         text-align: center;
     }
-    .primary-button{
+
+    .header-left {
         width: 100%;
+        align-items: center;
+        text-align: center;
     }
-    .header-right img{
-        width: 100%;
+
+    .header-right img {
+        width: 80%;
+        max-width: 500px;
     }
-    .big-feature-container{
+
+    .logos {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .features-area {
+        justify-content: center;
+    }
+
+    .feature-card {
+        max-width: 45%;
+        margin-top: 10px;
+    }
+
+    .big-feature-container {
         flex-direction: column;
+        text-align: center;
     }
-    #spl-cont{
+
+    .feature-dis {
+        align-items: center;
+        text-align: center;
+    }
+
+    #spl-cont {
         flex-direction: column-reverse;
     }
-}
-@media screen and (max-width:575px) {
-    .example-card{
-        width: 100%;
-        height: 150px;
+
+    .example-area {
+        gap: 20px;
     }
-}
-@media screen and (max-width:480px) {
-    .example-card{
-        height: 120px;
+
+    .example-card {
+        width: calc(50% - 20px);
+        height: 200px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .link-column {
+        align-items: center;
     }
 }
 
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .feature-card {
+        max-width: 100%;
+    }
+
+    .example-card {
+        width: 100%;
+    }
+
+    .company-logo img {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .header-section {
+        padding-top: 20px;
+    }
+
+    .feature-card {
+        max-width: 100%;
+    }
+}
